@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "642516032827",
+    "firebase_url": "https://sound-guided-car.firebaseio.com",
+    "project_id": "sound-guided-car",
+    "storage_bucket": "sound-guided-car.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642516032827:android:b9c41de4ca7b1c7e",
+        "android_client_info": {
+          "package_name": "ro.msupt.gd.radarapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642516032827-nc6aci1hla75tbh7v46sp9hcb9dnarrq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ro.msupt.gd.radarapp",
+            "certificate_hash": "0e2af8102f7980e66dfb85d4fb4505de39f4af20"
+          }
+        },
+        {
+          "client_id": "642516032827-fb2755kqpq0jvi45821gia0jsga3tang.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxvOlfPbSKV6cQhc7Q3tHMbRkUESM0aCI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "642516032827-fb2755kqpq0jvi45821gia0jsga3tang.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
