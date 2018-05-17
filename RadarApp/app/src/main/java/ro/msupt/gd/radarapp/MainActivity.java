@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference();
-    DatabaseReference conditionRef = myRef.child("location");
+    DatabaseReference conditionRef = myRef.child("location/position");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
