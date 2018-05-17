@@ -47,19 +47,19 @@ print(micro)
 if float(aux)>20 :
 	if micro==1:
 		firebase.put('location','position','Up')
-		bluetooth.write('F')
+		bluetooth.write(b"F")
 		time.sleep(1)
-		bluetooth.write('S')
+		bluetooth.write(b"S")
 	if micro==2:
 		firebase.put('location','position','Left')
-		bluetooth.write('G')
+		bluetooth.write(b"G")
 		time.sleep(1)
-		bluetooth.write('S')
+		bluetooth.write(b"S")
 	if micro==3:
 		firebase.put('location','position','Right')
-		bluetooth.write('I')
+		bluetooth.write(b"I")
 		time.sleep(1)
-		bluetooth.write('S')
+		bluetooth.write(b"S")
 else:
 	firebase.put('location','position','Default')
 bluetooth.close() #Otherwise the connection will remain open until a timeout which ties up the /dev/thingamabob
