@@ -212,6 +212,7 @@ void loop() {
     }
    // Serial.println(level);
       }
+      delay(1000);
      }
     
 }
