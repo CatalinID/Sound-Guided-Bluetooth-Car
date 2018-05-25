@@ -47,7 +47,7 @@ while 1 :
 	print("micro")
 	print(micro)
 
-	if float(aux)>20 :
+	if float(aux)>420 :
 		if micro==1:
 			firebase.put('location','position','Up')
 			bluetooth.write(b"F")
