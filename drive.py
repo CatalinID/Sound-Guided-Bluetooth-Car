@@ -2,14 +2,14 @@ from firebase import firebase
 import serial
 import time
 
-# the generated root for your project
+# the generated root for  project
 FIREBASE_ROOT = 'https://sound-guided-car.firebaseio.com'
 # init Firebase Database instance
 firebase = firebase.FirebaseApplication(FIREBASE_ROOT, None)
 firebase.put('location','position','Default')
 
 print("Start")
-port="/dev/rfcomm0" #This will be different for various devices and on windows it will probably be a COM port.
+port="/dev/rfcomm0"
 bluetooth=serial.Serial(port, 9600)#Start communications with the bluetooth unit
 print("Connected")
 while 1 : 
@@ -17,14 +17,8 @@ while 1 :
 	 #send 5 groups of data to the bluetooth
 	print("Ping")
 	time.sleep(1)
-	bluetooth.write(b"A")#These need to be bytes not unicode, plus a number
+	bluetooth.write(b"A")#bytes not unicode
 	print("A sent")
-	#bluetooth.write(b'F')
-	#time.sleep(5)
-	#bluetooth.write(b'S')
-	#time.sleep(5)
-	#bluetooth.write(b'L')
-	#time.sleep(5)
 	input_data=bluetooth.readline()
 	i=-1
 	m=[0,0,0]
@@ -51,20 +45,17 @@ while 1 :
 		if micro==1:
 			firebase.put('location','position','Up')
 			bluetooth.write(b"F")
-			#time.sleep(1)
 			
 		if micro==2:
 			firebase.put('location','position','Left')
 			bluetooth.write(b"G")
-			#time.sleep(1)
 			
 		if micro==3:
 			firebase.put('location','position','Right')
 			bluetooth.write(b"I")
-			#time.sleep(1)
 			
 	else:
 		firebase.put('location','position','Default')
-	#bluetooth.write(b'A')
-bluetooth.close() #Otherwise the connection will remain open until a timeout which ties up the /dev/thingamabob
-print("Done Gut fenomen")
+
+bluetooth.close() #Otherwise the connection will remain open until a timeout
+print("Done, Sound Found!")
