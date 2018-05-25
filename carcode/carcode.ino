@@ -26,7 +26,7 @@ int st;
 int i = 0;
 int j = 0;
 int state;
-int vSpeed = 200;
+int vSpeed = 180;
 float avr = 0;
 // Default speed, from 0 to 255
 float soundValue1, soundValue2, soundValue3;
@@ -54,7 +54,6 @@ void loop() {
   if (digitalRead(BTState) == LOW) {
     state = 'S';
   }
-
   //Save income data to variable 'state'
   
      if((st=Serial.read() ) == 'A' ){ 
@@ -106,7 +105,7 @@ void loop() {
   /***********************Forward****************************/
   //If state is equal with letter 'F', car will go forward!
   if (state == 'F') {
-    analogWrite(motorA1, vSpeed); analogWrite(motorA2, 0);
+    analogWrite(motorA1, 120); analogWrite(motorA2, 0);
     analogWrite(motorB1, 0);      analogWrite(motorB2, 0);
   }
   /**********************Forward Left************************/
@@ -212,7 +211,7 @@ void loop() {
     }
    // Serial.println(level);
       }
-      delay(1000);
+      delay(500);
      }
     
 }
